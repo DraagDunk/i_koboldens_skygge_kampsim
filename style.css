@@ -1,0 +1,56 @@
+.sheet {
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 1cm;
+    margin: 1rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 80%;
+
+    h2 {
+        text-align: center;
+    }
+
+    div {
+        margin-top: 1rem;
+
+        label {
+            display: block;
+            text-align: center;
+        }
+
+        .stat {
+            display: flex;
+            justify-content: center;
+            font-size: xx-large;
+
+            button {
+                font-size: inherit;
+                height: 3rem;
+                width: 3rem;
+            }
+
+            input[type="number"] {
+                -webkit-appearance: textfield;
+                -moz-appearance: textfield;
+                appearance: textfield;
+
+                border: none;
+                background: none;
+                text-align: center;
+                font-size: inherit;
+            }
+
+            input[type="text"] {
+                max-width: 100%;
+                font-size: 2rem;
+                text-align: center;
+            }
+        }
+    }
+}
+
+#battle_button {
+    font-size: 4rem;
+    padding: 0.5rem;
+    width: 80%;
+}

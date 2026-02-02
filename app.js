@@ -1,3 +1,17 @@
+function increaseValue(input) {
+    let el = document.getElementById(input);
+    if (el.value !== el.max) {
+        el.value++;
+    }
+}
+
+function decreaseValue(input) {
+    let el = document.getElementById(input);
+    if (el.value !== el.min) {
+        el.value--;
+    }
+}
+
 function roll2d6() {
     let roll1 = parseInt(Math.random() * 6) + 1;
     let roll2 = parseInt(Math.random() * 6) + 1;

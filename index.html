@@ -6,53 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koboldens skygge</title>
     <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h1>I koboldens skygge kampsimulator</h1>
-    <div>
+    <div class="sheet">
         <h2>Dig</h2>
         <div>
             <label for="name">Navn</label>
-            <input type="text" id="name" name="name">
+            <div class="stat">
+                <input type="text" id="name" name="name" value="Du">
+            </div>
         </div>
 
         <div>
             <label for="battle">Kampfærdighed</label>
-            <input type="number" id="battle" name="battle" min="1" value="1">
+            <div class="stat">
+                <button type="button" id="battle_dec" onclick="decreaseValue('battle')">-</button>
+                <input type="number" id="battle" name="battle" min="0" max="99" value="1">
+                <button type="button" id="battle_inc" onclick="increaseValue('battle')">+</button>
+            </div>
         </div>
 
         <div>
             <label for="health">Helbred</label>
-            <input type="number" id="health" name="health" min="1" value="1">
+            <div class="stat">
+                <button type="button" id="battle_dec" onclick="decreaseValue('health')">-</button>
+                <input type="number" id="health" name="health" min="0" max="99" value="1">
+                <button type="button" id="battle_inc" onclick="increaseValue('health')">+</button>
+            </div>
         </div>
 
         <div>
             <label for="dexterity">Behændighed</label>
-            <input type="number" id="dexterity" name="dexterity" min="1" value="1">
+            <div class="stat">
+                <button type="button" id="battle_dec" onclick="decreaseValue('dexterity')">-</button>
+                <input type="number" id="dexterity" name="dexterity" min="0" max="99" value="1">
+                <button type="button" id="battle_inc" onclick="increaseValue('dexterity')">+</button>
+            </div>
         </div>
     </div>
 
-    <div>
+    <div class="sheet">
         <h2>Fjenden</h2>
         <div>
             <label for="enemy-name">Navn</label>
-            <input type="text" id="enemy-name" name="enemy-name">
+            <div class="stat">
+                <input type="text" id="enemy-name" name="enemy-name" value="Fjenden">
+            </div>
         </div>
 
         <div>
             <label for="enemy-battle">Kampfærdighed</label>
-            <input type="number" id="enemy-battle" name="enemy-battle" min="1" value="1">
+            <div class="stat">
+                <button type="button" id="battle_dec" onclick="decreaseValue('enemy-battle')">-</button>
+                <input type="number" id="enemy-battle" name="enemy-battle" min="0" max="99" value="1">
+                <button type="button" id="battle_inc" onclick="increaseValue('enemy-battle')">+</button>
+            </div>
         </div>
 
         <div>
             <label for="enemy-health">Helbred</label>
-            <input type="number" id="enemy-health" name="enemy-health" min="1" value="1">
+            <div class="stat">
+                <button type="button" id="battle_dec" onclick="decreaseValue('enemy-health')">-</button>
+                <input type="number" id="enemy-health" name="enemy-health" min="0" max="99" value="1">
+                <button type="button" id="battle_inc" onclick="increaseValue('enemy-health')">+</button>
+            </div>
         </div>
     </div>
 
     <div>
-        <button type="button" onclick="doBattle();">Slå!</button>
+        <button type="button" id="battle_button" onclick="doBattle();">Slå!</button>
     </div>
 
     <div>
